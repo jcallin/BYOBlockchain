@@ -5,6 +5,8 @@ but with
 * Separated code files for server and proof-of-work
 * Added protection against rewritten tx history by implementing hash of previous block into validation computation
 
+Using Python 3.6+
+`pip install Flask requests`
 
 To test, run 2 nodes locally using `python server.py 5000` `python server.py 5001`
 
