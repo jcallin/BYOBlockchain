@@ -7,8 +7,8 @@ but with
 
 Using Python 3.6+
 Build a virtual environment to work in
-`virtualenv -p python3 py3_env`
-`py3_env/bin/pip3 install -r requirements.txt`
+* `virtualenv -p python3 py3_env`
+* `py3_env/bin/pip3 install -r requirements.txt`
 
 To test, run 2 nodes locally using `python server.py 5000` `python server.py 5001`
 
