@@ -1,28 +1,47 @@
 # BYOBlockchain
 A Proof-of-Work distributed ledger experiment.
 
-## Before cloning the repo,
+## Setting up a development environment
+
+### Before cloning the repo, we're going to set up dependencies
+#### Mac
+* Download homebrew for Mac (you want this anyways, trust me)
 * `brew install python3`
 * `pip3 install virtualenv`
 
-## After cloning the repo, go into the repo folder and run...
+#### Windows
+* Download and install Python 3, note where the .exe is installed
+* Add Python to your system PATH so windows command prompt can find it when you type `python` -- use Google for this part.
+* Open a command prompt
+* `pip install virtualenv` installs the pip python package manager
+* `pip install virtualenvwrapper-win` virtualenv needs a wrapper to be compatible with Windows
+
+### Clone the repo, after cloning the repo, cd into the repo folder
 Build a virtual environment to work in
 * `virtualenv -p python3 py3_env`
-* `py3_env/bin/pip3 install -r requirements.txt`
-Activate the virtual environment
+
+#### Mac
 * `source py3_env/bin/activate`
+#### Windows
+* `py3_env\Scripts\activate
+
+* pip3 install -r requirements.txt`
 
 A virtual environment, when activated, makes sure you are using a version of python installed in py3_env/ instead of your system python. Also, anything you install with `pip install <package>` while the virtualenv is activated will be installed inside py3_env/ instead of installed system wide. This is helpful because you don't want to mess with your system python/python packages.
-After running `source py3_env/bin/activate` above, run `which python3`. You should see the output leading to py3_env/bin/python3
+
+Run `which python3` (`where python3` for windows). You should see the output leading to .../py3_env/bin/python3
   
 Deactivate the virtual environment by running
 * `deactivate`
 
-Now run `which python3` again, you should see a path that looks like `/usr/local/bin/python3`
+Now run `which python3`/`where python3` again, you should see a path that looks like `/usr/local/bin/python3` or some other path pointing to your system python
+
+Reactivate the virtual environment
 
 ## Testing the blockchain
 * Open up 2 terminal windows
 * In each window, change directories to the repo folder
+* In each, run `source py3_env/bin/activate` to get back into the virtual environment
 * In one, run `python server.py 5000`
 * In the other, run `python server.py 5001`
 * You now are running 2 blockchain nodes and are ready to send requests to them using Postman
