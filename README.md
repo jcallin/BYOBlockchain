@@ -1,5 +1,5 @@
 # BYOBlockchain
-A Proof-of-Work distributed ledger experiment.
+Instructions for setting up the blockchain workshop
 
 ## Setting up a development environment
 
